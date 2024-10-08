@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <vector>
-#include <mex.h>
+//#include <mex.h>
 #include <Eigen/Dense>
 #include <fstream>
 #include <string>

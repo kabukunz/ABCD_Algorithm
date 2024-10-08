@@ -5,7 +5,7 @@
 					
 #include <iostream>
 #include <vector>
-#include <mex.h>
+//#include <mex.h>
 #include <Eigen/Dense>
 #include "common/optimization/line_search_util.h"
 #include "common/optimization/stop_check_util.h"
