@@ -8,7 +8,7 @@ namespace data_io {
 	std::string iteration_prefix;
 
 	mxArray* VectorOfVectorsToCellArray(const std::vector < std::vector<int>>& vector_of_vecors){
-		int key_num = vector_of_vecors.size();
+		size_t key_num = vector_of_vecors.size();
 		mwSize *vector_len = new mwSize[key_num], key_num_size[1] = { key_num };
 		for (int i = 0;i < key_num; i++)
 			vector_len[i] = vector_of_vecors[i].size();
@@ -28,7 +28,7 @@ namespace data_io {
 	}
 
 	mxArray* VectorOfSetsToCellArray(const std::vector < std::set<int>>& vector_of_vecors) {
-		int key_num = vector_of_vecors.size();
+		size_t key_num = vector_of_vecors.size();
 		mwSize *vector_len = new mwSize[key_num], key_num_size[1] = { key_num };
 		for (int i = 0;i < key_num; i++)
 			vector_len[i] = vector_of_vecors[i].size();
