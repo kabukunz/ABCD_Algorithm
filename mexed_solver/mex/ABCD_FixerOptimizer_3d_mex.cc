@@ -10,7 +10,9 @@
 #include "common/optimization/line_search_util.h"
 #include "common/optimization/stop_check_util.h"
 #include "common/solver/eigen/eigen_solver.h"
+#ifdef _USE_PARDISO
 #include "common/solver/pardiso/pardiso_solver.h"
+#endif
 #include "energy_model/distortion_kernel/arap_kernel_3d.h"
 #include "energy_model/distortion_kernel/flip_penalty_kernel_2d.h"					 
 #include "energy_model/distortion_kernel/flip_penalty_kernel_3d.h"					 
@@ -28,7 +30,6 @@
 #include "data_io/data_io_utils.h"
 #include "common/util/graph_util.h"
 
-#include "common/solver/pardiso/pardiso_solver.h"
 using namespace data_io;
 #define OUTPUT_RESULTS_PER_ITER 1
 
