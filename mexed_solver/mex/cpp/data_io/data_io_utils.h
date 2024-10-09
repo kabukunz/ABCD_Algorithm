@@ -10,7 +10,7 @@
 #include <vector>
 #include <Eigen/Dense>
 #include <Eigen/Sparse>
-//#include <mex.h>
+#include <mex.h>
 #include <set>
 #include <queue> 
 

@@ -11,7 +11,7 @@
 
 #include <iostream>
 #include <vector>
-//#include <mex.h>
+#include <mex.h>
 #include <Eigen/Dense>
 #include "energy_model/distortion_kernel/arap_kernel_2d.h"
 #include "energy_model/distortion_kernel/flip_penalty_kernel_2d.h"					 

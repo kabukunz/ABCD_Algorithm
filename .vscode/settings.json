@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "*.inl": "cpp",
-        "dense": "cpp"
+        "dense": "cpp",
+        "fstream": "cpp",
+        "string": "cpp",
+        "sparse": "cpp",
+        "unordered_map": "cpp"
     }
 }

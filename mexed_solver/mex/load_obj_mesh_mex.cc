@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-//#include <mex.h>
+#include <mex.h>
 #include <Eigen/Dense>
 
 #include "common/util/mesh_obj_io.h"
