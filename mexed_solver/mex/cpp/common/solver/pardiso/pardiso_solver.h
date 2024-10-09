@@ -74,7 +74,7 @@ public:
   void AnalyzePattern();
   bool Factorize();
   void Solve(const std::vector<double> &rhs, std::vector<double> *result);
-  void PardisoSolver::SolveDirichletConstraints(const Eigen::VectorXd& rhs,
+  void SolveDirichletConstraints(const Eigen::VectorXd& rhs,
 											    Eigen::VectorXd* lhs,
 											    const std::vector<int>& free_vertices,
 											    const std::vector<int>& fixed_vertices,
