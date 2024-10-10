@@ -37,7 +37,7 @@ using namespace data_io;
 
 enum RunTime { InputUpload,SearchDirComputation, BlockProcessing, RestInitialization, Optimization, OutputSave };
 
-void mexFunction(int num_of_lhs,
+void ABCD_FixerOptimizer_3d_mex_mexFunction(int num_of_lhs,
 	mxArray* pointer_of_lhs[],
 	int num_of_rhs,
 	const mxArray* pointer_of_rhs[]) {

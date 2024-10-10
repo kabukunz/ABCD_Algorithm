@@ -215,7 +215,7 @@ void GetMeshConnectivityData2D(const std::vector<Eigen::Vector3i> &triangle,
 	}
 
 // matlab interface: GetMeshData_mex(T, V, tn,vn,is_1_based_index, <fV>, <solver_spec>)
-void mexFunction(int num_of_lhs,
+void GetMeshData_mex_mexFunction(int num_of_lhs,
 	mxArray* pointer_of_lhs[],
 	int num_of_rhs,
 	const mxArray* pointer_of_rhs[]) 
