@@ -9,7 +9,7 @@
 
 #include "common/util/mesh_obj_io.h"
 
-void mexFunction(int num_of_lhs,
+void load_obj_mesh_mex_mexFunction(int num_of_lhs,
                  mxArray* pointer_of_lhs[],
                  int num_of_rhs,
                  const mxArray* pointer_of_rhs[]) {
