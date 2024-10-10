@@ -32,7 +32,8 @@ option(compile_with_pardiso           "compile_with_pardiso"              OFF)
 # compiler_option='/openmp';        % Compiler flags
 
 # sources
-set(ABCD_SRC "${CMAKE_CURRENT_SOURCE_DIR}/mexed_solver/mex")
+set(ABCD_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
+set(ABCD_SRC "${ABCD_DIR}/mexed_solver/mex")
 
 file(GLOB_RECURSE HEADERS "${ABCD_SRC}/*.h")
 file(GLOB_RECURSE CC_SOURCES "${ABCD_SRC}/*.cc")
@@ -130,25 +131,12 @@ list(APPEND MATLAB_LIBRARIES "${CMAKE_SOURCE_DIR}/dependencies/matlab/bin/maci64
 
 target_link_libraries(${PROJECT_NAME} ${MATLAB_LIBRARIES})
 
+# create main
+set(ABCD_MAIN "${ABCD_DIR}/wrapper")
+add_executable(${PROJECT_NAME}_main "${ABCD_MAIN}/main.cpp")
+target_link_libraries(${PROJECT_NAME}_main PRIVATE ${PROJECT_NAME})
 
 # properties
-# set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
+set_target_properties(${PROJECT_NAME}_main PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
 
 
-
-
-
-# # target: OpenMP::OpenMP_CXX
-
-# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
-
-# set(SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
-# set(HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/*.hpp)
-
-# add_executable(${PROJECT_NAME} ${SOURCES})
-
-# target_include_directories(${PROJECT_NAME} PUBLIC ${HEADERS} ${OpenMP_CXX_INCLUDE_DIRS})
-
-# target_link_libraries(${PROJECT_NAME} ${OpenMP_CXX_LIBRARIES})
-
-# set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
