@@ -128,6 +128,7 @@ list(APPEND MATLAB_LIBRARIES "${CMAKE_SOURCE_DIR}/dependencies/matlab/bin/maci64
 list(APPEND MATLAB_LIBRARIES "${CMAKE_SOURCE_DIR}/dependencies/matlab/bin/maci64/libmat.dylib")
 list(APPEND MATLAB_LIBRARIES "${CMAKE_SOURCE_DIR}/dependencies/matlab/bin/maci64/libmex.dylib")
 list(APPEND MATLAB_LIBRARIES "${CMAKE_SOURCE_DIR}/dependencies/matlab/bin/maci64/libmx.dylib")
+# list(APPEND MATLAB_LIBRARIES "${CMAKE_SOURCE_DIR}/dependencies/matlab/bin/maci64/mex")
 
 target_link_libraries(${PROJECT_NAME} ${MATLAB_LIBRARIES})
 
